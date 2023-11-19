@@ -34,7 +34,7 @@ export default async function Search({
       <NavBarLeft />
       <div className="main-content">
         <div className="p-5 flex justify-end border-b border-[#3a3939]">
-          <Profile name="lecaoquy" avatar="/defaultAvatar.jpeg" />
+          <Profile />
         </div>
         <div className="flex gap-[30px] flex-wrap justify-left container-film-items p-[50px]">
           <Suspense fallback={<FilmSkeleton />}>

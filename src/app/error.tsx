@@ -19,7 +19,7 @@ export default function GlobalError({
           <NavBarLeft />
           <div className="main-content">
             <div className="p-5 flex justify-end border-b border-[#3a3939]">
-              <Profile name="lecaoquy" avatar="/defaultAvatar.jpeg" />
+              <Profile />
             </div>
             <div className="p-[50px]">
               <h2 className="text-white text-[20px] font-semibold mb-5 text-center">
