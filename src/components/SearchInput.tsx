@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useKeyPress } from '@movie/lib/keyPress';
+import { useKeyPress } from '@movie/utils/keyPress';
 
 const SearchInput = () => {
   const router = useRouter();

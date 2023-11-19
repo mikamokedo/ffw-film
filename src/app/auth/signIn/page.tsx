@@ -1,5 +1,5 @@
 'use client';
-import { useKeyPress } from '@movie/lib/keyPress';
+import { useKeyPress } from '@movie/utils/keyPress';
 import { signIn, useSession } from 'next-auth/react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';

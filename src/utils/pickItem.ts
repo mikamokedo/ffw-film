@@ -1,5 +1,5 @@
-function random(len: number) {
-  return Math.floor(Math.random() * len);
+export function random(len: number) {
+  return Math.floor(Math.random() * (len + 1));
 }
 
 export function pickItem(arr: any[], quantity: number) {
@@ -11,7 +11,7 @@ export function pickItem(arr: any[], quantity: number) {
   }
   const result: any[] = [];
   while (result.length < quantity) {
-    const index = random(arr.length);
+    const index = random(arr.length - 1);
     const item = arr[index];
     const findItem = result.find((f) => f.id === item.id);
     if (!findItem) {

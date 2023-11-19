@@ -1,5 +1,5 @@
 'use client';
-import { useKeyPress } from '@movie/lib/keyPress';
+import { useKeyPress } from '@movie/utils/keyPress';
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -27,7 +27,6 @@ const LoginPage = () => {
       email: email.current,
       password: password.current,
     });
-    console.log(res);
     if (res?.error) {
       setError(res.error.message);
     } else {
