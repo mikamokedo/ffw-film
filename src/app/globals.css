@@ -54,7 +54,7 @@ body {
 }
 
 .main-content {
-  width: calc(100% - 580px);
+  width: 100%;
 }
 
 .hide-text-col {
@@ -80,4 +80,10 @@ body {
 .pagination li:hover,
 .pagination li.selected {
   color: #5884ff;
+}
+
+@media only screen and (max-width: 508px) {
+  .container-film-items {
+    justify-content: center;
+  }
 }

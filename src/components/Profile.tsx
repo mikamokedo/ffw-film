@@ -7,8 +7,8 @@ import { useSession } from 'next-auth/react';
 const Profile = () => {
   const { data: session } = useSession();
   return (
-    <div className="flex gap-6 mt-[8px]">
-      <span className="text-[16px] font-normal text-[#989898]">
+    <div className="flex gap-2 items-center">
+      <span className="hidden sm:block text-[12px] sm:text-[16px] font-normal text-[#989898]">
         {session?.user?.email}
       </span>
       <span className="w-[28px]">

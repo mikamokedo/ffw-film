@@ -32,10 +32,12 @@ const NavHomeItem: React.FC<NavHomeItemProps> = ({
   return (
     <div className="cursor-pointer" onClick={handleClick}>
       <div
-        className={`flex items-center hover gap-6 ${isActive ? 'active' : ''}`}
+        className={`px-3 md:px-[30px] flex items-center hover gap-6 ${
+          isActive ? 'active' : ''
+        }`}
       >
         <div className="text-[#989898] color-hover w-[25px]">{icon}</div>
-        <div className="text-[16px] font-medium text-[#989898] color-hover">
+        <div className="hidden md:block text-[16px] font-medium text-[#989898] color-hover">
           {name}
         </div>
       </div>

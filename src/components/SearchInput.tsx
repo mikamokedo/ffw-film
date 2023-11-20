@@ -40,7 +40,7 @@ const SearchInput = () => {
       <input
         value={value}
         type="text"
-        className="bg-[#333335] outline-none py-3 pr-7 pl-14 rounded-[50px] text-[white] font-medium max-w-[302px] w-[100%]"
+        className="bg-[#333335] outline-none py-3 pr-7 pl-14 rounded-[50px] text-[white] font-medium w-[100%]"
         placeholder="Search..."
         onChange={(e) => setValue(e.target.value)}
       />

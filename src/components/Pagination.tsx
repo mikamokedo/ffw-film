@@ -19,11 +19,11 @@ const Pagination: React.FC<PaginationProps> = ({ pageCount, onPageActive }) => {
     <div className="flex justify-center mt-[30px]">
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName="pagination"
         forcePage={onPageActive - 1}

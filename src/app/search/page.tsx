@@ -1,6 +1,3 @@
-import NavBarLeft from '@movie/components/NavBarLeft';
-import NavbarRight from '@movie/components/NavbarRight';
-import Profile from '@movie/components/Profile';
 import { Suspense } from 'react';
 import FilmSkeleton from '@movie/components/skeletons/FilmSkeleton';
 import SearchContainer from '@movie/components/SearchContainer';
@@ -14,7 +11,7 @@ export async function generateMetadata({
   const query =
     typeof searchParams.query === 'string' ? searchParams.query : undefined;
   return {
-    title: `${query} - FFW movie`,
+    title: `${query ? query + '-' : ''} FFW movie`,
     description: `Search films with keyword: ${query}`,
   };
 }
@@ -30,19 +27,10 @@ export default async function Search({
     typeof searchParams.page === 'string' ? searchParams.page : undefined;
 
   return (
-    <main className="min-h-screen flex">
-      <NavBarLeft />
-      <div className="main-content">
-        <div className="p-5 flex justify-end border-b border-[#3a3939]">
-          <Profile />
-        </div>
-        <div className="flex gap-[30px] flex-wrap justify-left container-film-items p-[50px]">
-          <Suspense fallback={<FilmSkeleton />}>
-            <SearchContainer query={query} page={page} />
-          </Suspense>
-        </div>
-      </div>
-      <NavbarRight tags={[]} />
-    </main>
+    <div className="p-[30px] pb-[60px] lg:p-[50px] lg:pb-[50px]">
+      <Suspense fallback={<FilmSkeleton />}>
+        <SearchContainer query={query} page={page} />
+      </Suspense>
+    </div>
   );
 }

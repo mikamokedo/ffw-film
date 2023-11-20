@@ -8,8 +8,11 @@ import { signOut } from 'next-auth/react';
 
 const NavBarLeft = () => {
   return (
-    <div className="pt-[40px] pl-[32px] w-[260px] h-100vh border-r border-[#3a3939]">
-      <Link href="/" className="flex items-center">
+    <div className=" py-[20px] h-100vh border-r border-[#3a3939]">
+      <Link
+        href="/"
+        className="hidden px-3 w-[100px] md:w-[150px] sm:flex items-center m-auto"
+      >
         <Image
           src="https://media.umbraco.io/ffw-website/lvsdbo30/ffw-logo-white.svg"
           alt="logo"
@@ -18,8 +21,10 @@ const NavBarLeft = () => {
         />
       </Link>
       <div>
-        <div className="mt-[48px] text-lg font-medium text-white">MENU</div>
-        <div className="mt-8 ml-4 gap-6 flex flex-col">
+        <div className="px-3 md:px-[30px] hidden md:block mt-[48px] text-lg font-medium text-white">
+          MENU
+        </div>
+        <div className="items-center md:items-start mt-8 gap-6 flex flex-col">
           <NavBarLeftItem
             icon={
               <svg
@@ -76,11 +81,9 @@ const NavBarLeft = () => {
             name="Upcoming"
             href="/upcoming"
           />
-        </div>
-      </div>
-      <div>
-        <div className="mt-12 text-lg font-medium text-white">PERSONAL</div>
-        <div className="mt-[31px] ml-4 gap-6 flex flex-col">
+          <div className="hidden md:block px-3 md:px-[30px] mt-12 text-lg font-medium text-white">
+            PERSONAL
+          </div>
           <NavBarLeftItem
             icon={
               <svg
@@ -105,6 +108,7 @@ const NavBarLeft = () => {
           />
         </div>
       </div>
+      <div></div>
     </div>
   );
 };

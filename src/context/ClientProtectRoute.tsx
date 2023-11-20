@@ -26,7 +26,7 @@ export const ClientProtectProvider: React.FC<PropsWithChildren> = ({
     if (session && backToHomePages.includes(pathName)) {
       void router.push('/');
     }
-  }, [session]);
+  }, [session, pathName]);
 
   return (
     <ClientProtectContext.Provider value>

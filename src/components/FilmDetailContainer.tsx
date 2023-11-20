@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { pickItem } from '@movie/utils/pickItem';
 import { getFilmDetail } from '@movie/services/films';
 
 type FilmDetailProps = {
@@ -11,16 +10,16 @@ type FilmDetailProps = {
 const FilmDetailContainer: React.FC<FilmDetailProps> = async ({ id }) => {
   const film = await getFilmDetail(id);
   return (
-    <div className="p-[50px]">
-      <div className="relative mb-10">
+    <div className="p-[30px] pb-[60px] lg:p-[50px] lg:pb-[50px]">
+      <div className="relative flex items-center flex-col lg:block mb-10 gap-3">
         <Image
           src={`https://image.tmdb.org/t/p/original/${film.backdrop_path}`}
           alt={film.title}
           width={2048}
           height={1152}
-          // className='rounded-[50px]'
+          className="hidden lg:block"
         />
-        <div className="absolute left-0 bottom-[-30px]">
+        <div className="relative lg:absolute left-0  bottom-0 lg:bottom-[-30px]">
           <Image
             src={`https://image.tmdb.org/t/p/w185/${film.poster_path}`}
             alt={film.title}
@@ -29,11 +28,11 @@ const FilmDetailContainer: React.FC<FilmDetailProps> = async ({ id }) => {
             className="rounded-[5px]"
           />
         </div>
-        <h1 className="text-white absolute z-10 bottom-[30px] left-[200px] text-[30px] font-bold">
+        <h1 className="relative bottom-0 left-0 lg:absolute text-white z-10 lg:bottom-[30px] lg:left-[200px] text-[22px] lg:text-[30px] font-bold">
           {film.title}
         </h1>
         <Link
-          className="absolute right-[10px] bottom-[10px] px-5 py-2 bg-[#5179FF] w-[200px] flex items-center justify-center rounded-[10px]"
+          className="relative bottom-0 lg:mt-0 right-0 lg:right-[10px] lg:absolute lg:bottom-[10px] px-5 py-2 bg-[#5179FF] w-[200px] flex items-center justify-center rounded-[10px]"
           href={`https://www.imdb.com/title/${film.imdb_id}`}
         >
           <svg
@@ -47,10 +46,13 @@ const FilmDetailContainer: React.FC<FilmDetailProps> = async ({ id }) => {
           >
             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
           </svg>
-          <span className="text-white text-[20px] font-bold"> Watch</span>
+          <span className="text-white text-[16px] lg:text-[20px] font-bold">
+            {' '}
+            Watch
+          </span>
         </Link>
       </div>
-      <div className="text-white text-[20px] font-bold mb-4">
+      <div className="text-white text-[16px] lg:text-[20px] font-bold mb-4">
         {film.tagline}
       </div>
       <div className="text-white text-[14px] font-bold mb-1">STORY:</div>

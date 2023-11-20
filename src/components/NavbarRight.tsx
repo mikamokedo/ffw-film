@@ -11,7 +11,7 @@ type NavbarRightProps = {
 
 const NavbarRight: React.FC<NavbarRightProps> = ({ tags, filmId }) => {
   return (
-    <div className="w-[320px] h-100vh pt-[28px] px-6 border-l border-[#3a3939]">
+    <div className="fixed bottom-[10px] w-full left-0  md:relative md:w-[320px] h-100vh pt-[28px] px-6 border-l border-[#3a3939]">
       <div>
         <SearchInput />
       </div>

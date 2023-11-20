@@ -16,7 +16,7 @@ const SearchContainer: React.FC<SearchContainerProps> = async ({
   return (
     <div className="w-full">
       {query ? (
-        <div className="text-white font-semibold text-[18px] mb-5">{`Search results for "${query}" (${films.total_results} results found)`}</div>
+        <div className="text-white font-semibold text-[16px] sm:text-[18px] mb-5">{`Search results for "${query}" (${films.total_results} results found)`}</div>
       ) : (
         <div className="flex items-center flex-col justify-center m-auto">
           <div className="mb-3">
