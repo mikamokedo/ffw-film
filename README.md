@@ -7,7 +7,7 @@ environment:
 Nodejs version > 19
 ```
 
-First, run the development server:
+run the development server:
 
 ```bash
 npm install
@@ -22,3 +22,5 @@ npm run test
 ```
 
 ## Deploy on Vercel
+
+https://ffw-film.vercel.app/
