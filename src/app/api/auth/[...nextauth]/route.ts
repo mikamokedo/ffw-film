@@ -1,4 +1,4 @@
-import { authOptions } from '@movie/services/authOption';
+import { authOptions } from '@movie/services/authService';
 import NextAuth from 'next-auth';
 
 const handler = NextAuth(authOptions);

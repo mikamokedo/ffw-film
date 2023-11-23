@@ -5,7 +5,7 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@movie/services/authOption';
+import { authOptions } from '@movie/services/authService';
 import { ClientProtectProvider } from '@movie/context/ClientProtectRoute';
 import { LayoutProvider } from '@movie/context/LayoutProvider';
 
