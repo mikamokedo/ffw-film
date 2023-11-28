@@ -11,7 +11,6 @@ const API_KEY = process.env.API_KEY;
 const BACKEND_URL = process.env.BACKEND_URL;
 
 export async function getFilms(type: GetFilmsType): Promise<FilmListResponse> {
-  await delay(1000);
   switch (type) {
     case 'top_rated':
       return getTopRatedMovies();

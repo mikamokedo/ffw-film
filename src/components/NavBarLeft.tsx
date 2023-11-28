@@ -13,12 +13,12 @@ const NavBarLeft = () => {
         href="/"
         className="hidden px-3 w-[100px] md:w-[150px] sm:flex items-center m-auto"
       >
-        <Image
+        {/* <Image
           src="https://media.umbraco.io/ffw-website/lvsdbo30/ffw-logo-white.svg"
           alt="logo"
           width={100}
           height={100}
-        />
+        /> */}
       </Link>
       <div>
         <div className="px-3 md:px-[30px] hidden md:block mt-[48px] text-lg font-medium text-white">
